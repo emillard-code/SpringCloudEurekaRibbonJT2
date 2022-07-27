@@ -15,14 +15,14 @@ public class ShoppingController {
     @GetMapping("/amazon-payment/{price}")
     public String invokePaymentService(@PathVariable int price) {
 
-        return template.getForObject("http://PAYMENT-SERVICE/payment-provider/payNow/"+price, String.class);
+        return template.getForObject("http://PAYMENT-SERVICE/payment-provider/payNow/" + price, String.class);
 
     }
 
     @GetMapping("/test")
     public String test() {
 
-        return "working....";
+        return "Working....";
 
     }
 
